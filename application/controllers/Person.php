@@ -95,35 +95,35 @@ class Person extends CI_Controller {
 		$data['inputerror'] = array();
 		$data['status'] = TRUE;
 
-		if($this->input->post('firstName') == '')
+		if($this->input->post('firstName') == null)
 		{
 			$data['inputerror'][] = 'firstName';
 			$data['error_string'][] = 'First name is required';
 			$data['status'] = FALSE;
 		}
 
-		if($this->input->post('lastName') == '')
+		if($this->input->post('lastName') == null)
 		{
 			$data['inputerror'][] = 'lastName';
 			$data['error_string'][] = 'Last name is required';
 			$data['status'] = FALSE;
 		}
 
-		if($this->input->post('dob') == '')
+		if($this->input->post('dob') == null)
 		{
 			$data['inputerror'][] = 'dob';
 			$data['error_string'][] = 'Date of Birth is required';
 			$data['status'] = FALSE;
 		}
 
-		if($this->input->post('gender') == '')
+		if($this->input->post('gender') == null)
 		{
 			$data['inputerror'][] = 'gender';
 			$data['error_string'][] = 'Please select gender';
 			$data['status'] = FALSE;
 		}
 
-		if($this->input->post('address') == '')
+		if($this->input->post('address') == null)
 		{
 			$data['inputerror'][] = 'address';
 			$data['error_string'][] = 'Addess is required';
